@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kubernetes.io/change-cause: "Changes port to 110"
+    kubernetes.io/change-cause: "Changes nginx tag to testfake"
   name: deployment-test
   labels:
     app: frontend
@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:testfake
         ports:
           - containerPort: 110
