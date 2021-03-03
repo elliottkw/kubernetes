@@ -16,8 +16,5 @@ spec:
     spec:
       containers:
         - name: container1
-          image: python:3.6-alpine
+          image: python:3.7-alpine
           command: ['sh', '-c', 'echo container1 > index.html && python -m http.server 8082']
-        - name: container2
-          image: python:3.6-alpine
-          command: ['sh', '-c', 'echo container2 > index.html && python -m http.server 8083']
